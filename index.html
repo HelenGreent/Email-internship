@@ -1,431 +1,410 @@
 <!DOCTYPE html
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Email</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            body {
+                width: 100% !important;
+                -webkit-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
+                margin: 0;
+                padding: 0;
+                line-height: 100%
+            }
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Email</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            width: 100% !important;
-            -webkit-text-size-adjust: 100%;
-            -ms-text-size-adjust: 100%;
-            margin: 0;
-            padding: 0;
-            line-height: 100%
-        }
+            [style*="Noto Sans"] {
+                font-family: 'Noto Sans', sans-serif !important;
+            }
 
-        [style*="Noto Sans"] {
-            font-family: 'Noto Sans', sans-serif !important;
-        }
+            img {
+                outline: none;
+                text-decoration: none;
+                border: none;
+                -ms-interpolation-mode: bicubic;
+                max-width: 100% !important;
+                margin: 0;
+                padding: 0;
+                display: block;
+            }
 
-        img {
-            outline: none;
-            text-decoration: none;
-            border: none;
-            -ms-interpolation-mode: bicubic;
-            max-width: 100% !important;
-            margin: 0;
-            padding: 0;
-            display: block;
-        }
+            table td {
+                border-collapse: collapse;
+            }
 
-        table td {
-            border-collapse: collapse;
-        }
+            /* style for Outlook */
+            table {
+                border-collapse: collapse;
+            }
 
-        /* style for Outlook */
-        table {
-            border-collapse: collapse;
-            mso-table-lspace: 0pt;
-            mso-table-rspace: 0pt;
-        }
+            .internship-padding h1 {
+                padding-top: 32px;
+                padding-bottom: 32px;
+            }
 
-        .internship-padding h1 {
-            padding-top: 32px;
-            padding-bottom: 32px;
-        }
+            .welcome-padding h2 {
+                padding-bottom: 17px;
+            }
 
-        .welcome-padding h2 {
-            padding-bottom: 17px;
-        }
+            .header-td h1, h2 {
+                font-weight: bold;
+                font-size: 36px;
+                text-align: center;
+                color: #000000;
+            }
 
-        .header-td h1,
-        h2 {
-            font-weight: bold;
-            font-size: 36px;
-            text-align: center;
-            color: #000000;
-        }
+            .banner-radius {
+                border-radius: 20px;
+            }
 
-        .banner-radius {
-            border-radius: 20px;
-        }
+            .banner-text p {
+                font-weight: normal;
+                font-size: 19px;
+                line-height: 24px;
+                text-align: center;
+                color: #000000;
+            }
 
-        .banner-text p {
-            font-weight: normal;
-            font-size: 19px;
-            line-height: 24px;
-            text-align: center;
-            color: #000000;
-        }
+            .button-td {
+                padding-top: 5px;
+                padding-bottom: 70px;
+            }
 
-        .button-td {
-            padding-top: 5px;
-            padding-bottom: 70px;
-        }
+            .button {
+                width: 71px;
+                height: 16px;
+            }
 
-        .button {
-            width: 71px;
-            height: 16px;
-        }
+            .button a {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 16px;
+                text-align: center;
+                color: #000000;
+                text-decoration: none;
+            }
 
-        .button a {
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 16px;
-            text-align: center;
-            color: #000000;
-            text-decoration: none;
-        }
+            .button-radius {
+                border-radius: 4px;
+                border: 1px solid #000;
+                display: block;
+            }
 
-        .button-radius {
-            border-radius: 4px;
-            border: 1px solid #000;
-            display: block;
-        }
+            .little-banners h3 {
+                font-weight: bold;
+                font-size: 27px;
+                line-height: 34px;
+                color: #1C1E23;
+            }
 
-        .little-banners h3 {
-            font-weight: bold;
-            font-size: 27px;
-            line-height: 34px;
-            color: #1C1E23;
-        }
+            .little-banners p {
+                font-weight: normal;
+                font-size: 19px;
+                line-height: 24px;
+                color: #000000;
+            }
 
-        .little-banners p {
-            font-weight: normal;
-            font-size: 19px;
-            line-height: 24px;
-            color: #000000;
-        }
+            .banners-left {
+                padding-left: 25px;
+            }
 
-        .banners-left {
-            padding-left: 25px;
-        }
+            .banner-text-left p {
+                text-align: left;
+            }
 
-        .banner-text-left p {
-            text-align: left;
-        }
+            .padding-to-section23 {
+                padding-top: 70px;
+            }
 
-        .padding-to-section23 {
-            padding-top: 70px;
-        }
+            .line {
+                padding-top: 25px;
+            }
 
-        .line {
-            padding-top: 25px;
-        }
+            .line hr {
+                height: 2px;
+                width: 540px;
+                color: #000000;
+                background: #000000;
+            }
 
-        .line hr {
-            height: 2px;
-            width: 540px;
-            color: #000000;
-            background: #000000;
-        }
+            .footer-text {
+                padding-top: 30px;
+            }
 
-        .footer-text {
-            padding-top: 30px;
-        }
+            .footer-text p {
+                text-align: center;
+                font-weight: normal;
+                font-size: 13px;
+                line-height: 19px;
+                color: #000000;
+            }
 
-        .footer-text p {
-            text-align: center;
-            font-weight: normal;
-            font-size: 13px;
-            line-height: 19px;
-            color: #000000;
-        }
+            .foo-adress {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
 
-        .foo-adress {
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
+            .foo-adress p, a {
+                font-weight: normal;
+                font-size: 13px;
+                line-height: 19px;
+                text-align: center;
+                color: #000000;
+            }
 
-        .foo-adress p,
-        a {
-            font-weight: normal;
-            font-size: 13px;
-            line-height: 19px;
-            text-align: center;
-            color: #000000;
-        }
-
-        .foo-logo {
-            padding-bottom: 14px;
-        }
-    </style>
-</head>
-
-<body style="margin: 0; padding: 0;">
-    <div style="font-size:0px;font-color:#ffffff;opacity:0; visibility: hidden; width: 0; height: 0; display: none;">
-        Some Text
+            .foo-logo {
+                padding-bottom: 14px;
+            }
+        </style>
+    </head>
+    <body style="margin: 0; padding: 0;">
+        <div style="font-size:0px;opacity:0; visibility: hidden; width: 0; height: 0; display: none;">Some Text
     </div>
-    <!-- загальна таблиця -->
-    <table cellpadding="0" cellspacing="0" width="100%" bgcolor="#FFE7E7">
-        <tr>
-            <td>
-                <table class="main table-600" cellpadding="0" cellspacing="0" width="600" align="center">
-                    <tr>
-                        <!-- перший відступ -->
-                        <td height="36" width="600"></td>
-                    </tr>
-                    <tr>
-                        <td bgcolor="#FFFFFF" class="header-td internship-padding">
-                            <h1 style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';">Internship</h1>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td bgcolor="#FFFFFF" class="header-td welcome-padding">
-                            <h2 style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';">Welcome HTML =)</h2>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td bgcolor="#FFFFFF">
-                            <table class="banner-radius" bgcolor="#FFE7E7" cellpadding="0" cellspacing="0" width="504"
-                                align="center">
-                                <tr>
-                                    <td align="center">
-                                        <img src="https://i.ibb.co/M1gDTJ5/Amigos.png" alt="amigos-banner">
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td bgcolor="#FFFFFF" class="banner-text">
-                            <p style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';">Boost your emails with
-                                Blush! Create dope emails easy <br /> and fast! Install the Blush plugin to customize
-                                all the <br /> illustrations! </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <table bgcolor="#FFFFFF" cellspacing="0" cellpadding="0" width="600" align="center">
-                                <tr>
-                                    <td class="button-td">
-                                        <table class="button-radius" bgcolor="#FFFFFF" cellspacing="0" cellpadding="0"
-                                            width="97" align="center">
-                                            <tr>
-                                                <td class="button" align="center"
-                                                    style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px;padding-left: 10px;">
-                                                    <a style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';"
-                                                        href="#" target="_blank">
-                                                        Try it now!
+        <!-- загальна таблиця -->
+        <table cellpadding="0" cellspacing="0" width="100%" bgcolor="#FFE7E7">
+            <tr>
+                <td>
+                    <table class="main table-600" cellpadding="0" cellspacing="0" width="600" align="center">
+                        <tr>
+                            <!-- перший відступ -->
+                            <td height="36" width="600"></td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#FFFFFF" class="header-td internship-padding">
+                                <h1 style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';">Internship</h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#FFFFFF" class="header-td welcome-padding">
+                                <h2 style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';">Welcome HTML =)</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#FFFFFF">
+                                <table class="banner-radius" bgcolor="#FFE7E7" cellpadding="0" cellspacing="0" width="504" align="center">
+                                    <tr>
+                                        <td align="center">
+                                            <img src="https://i.ibb.co/M1gDTJ5/Amigos.png" alt="amigos-banner">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#FFFFFF" class="banner-text">
+                                <p style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';">
+                                    Boost your emails with
+                                Blush! Create dope emails easy <br/>
+                                    and fast! Install the Blush plugin to customize
+                                all the <br/>illustrations! 
+                                
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table bgcolor="#FFFFFF" cellspacing="0" cellpadding="0" width="600" align="center">
+                                    <tr>
+                                        <td class="button-td">
+                                            <table class="button-radius" bgcolor="#FFFFFF" cellspacing="0" cellpadding="0" width="97" align="center">
+                                                <tr>
+                                                    <td class="button" align="center" style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px;padding-left: 10px;">
+                                                        <a style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';" href="#" target="_blank">Try it now!
                                                     </a>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="section1-td">
-                            <table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" width="600"
-                                align="center">
-                                <tr>
-                                    <td bgcolor="#FFFFFF">
-                                        <table class="banner-radius" bgcolor="#FFE7E7" cellpadding="0" cellspacing="0"
-                                            width="260" align="center">
-                                            <tr>
-                                                <td align="center">
-                                                    <img src="https://i.ibb.co/fvzrFYg/Outdoors.png" alt="banner" border="0"></a>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                    <td class="little-banners">
-                                        <h3 style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';">Customize
-                                            this <br /> email template!</h3>
-                                        <p style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';">Boost your
-                                            emails with <br /> Blush! Create dope emails <br /> easy and fast!
-                                        </p>
-                                        <table class="button-radius" bgcolor="#FFFFFF" cellspacing="0" cellpadding="0"
-                                            width="97" align="left">
-                                            <tr>
-                                                <td class="button" align="center"
-                                                    style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px;padding-left: 10px;">
-                                                    <a style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';"
-                                                        href="#" target="_blank">
-                                                        Try it now!
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="section1-td">
+                                <table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" width="600" align="center">
+                                    <tr>
+                                        <td bgcolor="#FFFFFF">
+                                            <table class="banner-radius" bgcolor="#FFE7E7" cellpadding="0" cellspacing="0" width="260" align="center">
+                                                <tr>
+                                                    <td align="center">
+                                                        <img src="https://i.ibb.co/fvzrFYg/Outdoors.png" alt="banner">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td class="little-banners">
+                                            <h3 style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';">
+                                                Customize  this <br/>email template!
+    
+                                            </h3>
+                                            <p style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';">
+                                                Boost your emails with <br/>
+                                                Blush! Create dope emails <br/>easy and fast!
+                                        
+    
+                                            </p>
+                                            <table class="button-radius" bgcolor="#FFFFFF" cellspacing="0" cellpadding="0" width="97" align="left">
+                                                <tr>
+                                                    <td class="button" align="center" style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px;padding-left: 10px;">
+                                                        <a style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';" href="#" target="_blank">Try it now!
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="section2-td">
+                                <table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" width="600" align="center">
+                                    <tr>
+                                        <td class="little-banners banners-left padding-to-section23">
+                                            <h3 style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';">
+                                                Customize this <br/>email template!
+                    
+                                            </h3>
+                                            <p style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';">
+                                                Boost your  emails with <br/>
+                                                Blush! Create dope emails <br/>easy and fast!                                     
+                    
+                                            </p>
+                                            <table class="button-radius" bgcolor="#FFFFFF" cellspacing="0" cellpadding="0" width="97" align="left">
+                                                <tr>
+                                                    <td class="button" align="center" style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px;padding-left: 10px;">
+                                                        <a style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';" href="#" target="_blank">Try it now!
                                                     </a>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-
-
-                    <tr>
-                        <td class="section2-td">
-                            <table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" width="600"
-                                align="center">
-                                <tr>
-
-                                    <td class="little-banners banners-left padding-to-section23">
-                                        <h3 style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';">Customize
-                                            this <br /> email template!</h3>
-                                        <p style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';">Boost your
-                                            emails with <br /> Blush! Create dope emails <br /> easy and fast!
-                                        </p>
-                                        <table class="button-radius" bgcolor="#FFFFFF" cellspacing="0" cellpadding="0"
-                                            width="97" align="left">
-                                            <tr>
-                                                <td class="button" align="center"
-                                                    style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px;padding-left: 10px;">
-                                                    <a style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';"
-                                                        href="#" target="_blank">
-                                                        Try it now!
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td class="padding-to-section23" bgcolor="#FFFFFF">
+                                            <table class="banner-radius" bgcolor="#FFE7E7" cellpadding="0" cellspacing="0" width="260" align="center">
+                                                <tr>
+                                                    <td align="center">
+                                                        <img src="https://i.ibb.co/3RJ6W6S/Sitting-on-floor.png" alt="sitting-banner">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="section3-td">
+                                <table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" width="600" align="center">
+                                    <tr>
+                                        <td class="padding-to-section23" border="1" bgcolor="#FFFFFF">
+                                            <table class="banner-radius" bgcolor="#FFE7E7" cellpadding="0" cellspacing="0" width="260" align="center">
+                                                <tr>
+                                                    <td align="center">
+                                                        <img src="https://i.ibb.co/bJ4CJ6K/Avatar.png" alt="avatar-banner">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td class="little-banners padding-to-section23">
+                                            <h3 style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';">
+                                                Customize this <br/>email template!
+                    
+                                            </h3>
+                                            <p style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';">
+                                                Boost your emails with <br/>
+                                                Blush! Create dope emails <br/>easy and fast!
+                                        
+                    
+                                            </p>
+                                            <table class="button-radius" bgcolor="#FFFFFF" cellspacing="0" cellpadding="0" width="97" align="left">
+                                                <tr>
+                                                    <td class="button" align="center" style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px;padding-left: 10px;">
+                                                        <a style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';" href="#" target="_blank">Try it now!
                                                     </a>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                    <td class="padding-to-section23" border="1" bgcolor="#FFFFFF">
-                                        <table class="banner-radius" bgcolor="#FFE7E7" cellpadding="0" cellspacing="0"
-                                            width="260" align="center">
-                                            <tr>
-                                                <td align="center">
-                                                    <img src="https://i.ibb.co/3RJ6W6S/Sitting-on-floor.png" alt="sitting-banner">
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-
-
-                    <tr>
-                        <td class="section3-td">
-                            <table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" width="600"
-                                align="center">
-                                <tr>
-                                    <td class="padding-to-section23" border="1" bgcolor="#FFFFFF">
-                                        <table class="banner-radius" bgcolor="#FFE7E7" cellpadding="0" cellspacing="0"
-                                            width="260" align="center">
-                                            <tr>
-                                                <td align="center">
-                                                    <img src="https://i.ibb.co/bJ4CJ6K/Avatar.png" alt="avatar-banner">
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                    <td class="little-banners padding-to-section23">
-                                        <h3 style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';">Customize
-                                            this <br /> email template!</h3>
-                                        <p style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';">Boost your
-                                            emails with <br /> Blush! Create dope emails <br /> easy and fast!
-                                        </p>
-                                        <table class="button-radius" bgcolor="#FFFFFF" cellspacing="0" cellpadding="0"
-                                            width="97" align="left">
-                                            <tr>
-                                                <td class="button" align="center"
-                                                    style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px;padding-left: 10px;">
-                                                    <a style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';"
-                                                        href="#" target="_blank">
-                                                        Try it now!
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <table bgcolor="#FFFFFF" cellspacing="0" cellpadding="0" width="600"
-                                align="left">
-                                <td bgcolor="#FFFFFF" class="banner-text banners-left banner-text-left">
-                                    <p
-                                        style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans'; padding-top: 40px;padding-left: 10px;">
-                                        Boost your emails
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table bgcolor="#FFFFFF" cellspacing="0" cellpadding="0" width="600" align="left">
+                                    <td bgcolor="#FFFFFF" class="banner-text banners-left banner-text-left">
+                                        <p style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans'; padding-top: 40px;padding-left: 10px;">
+                                            Boost your emails
                                         with
-                                        Blush! Create dope emails easy and fast! <br /> Install the Blush plugin to
+                                        Blush! Create dope emails easy and fast! <br/>
+                                            Install the Blush plugin to
                                         customize
                                         all the illustrations!
-                                        <br />
-                                        <br />
-                                        <br />
-                                        Create the coolest emails!
-                                    </p>
-                                </td>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td bgcolor="#FFFFFF" class="line">
-                            <hr>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td bgcolor="#FFFFFF" class="footer-text">
-                            <p style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';">Corporation <br />You are
-                                receiving this email because you opted in via our <br /> website.</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td bgcolor="#FFFFFF">
-                            <table bgcolor="#FFFFFF" cellspacing="0" cellpadding="0" width="250"
-                                align="center">
-                                <tr>
-                                    <td align="center">
-                                        <img src="https://i.ibb.co/hMj7kyr/twitter.png" alt="twitter">
+                                        <br/>
+                                            <br/>
+                                            <br/>Create the coolest emails!      
+                                        </p>
                                     </td>
-                                    <td align="center">
-                                        <img src="https://i.ibb.co/hyS7FTY/instagram.png" alt="instagram">
-                                    </td>
-                                    <td align="center">
-                                        <img src="https://i.ibb.co/BLvGP6d/youtube.png" alt="youtube">
-                                    </td>
-                                    <td align="center">
-                                        <img src="https://i.ibb.co/XpHsNQP/ball.png" alt="earth">
-                                    </td>
-                                    <td align="center">
-                                        <img src="https://i.ibb.co/KFjhmLm/linkedin.png" alt="linkedin">
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="foo-adress" align="center" bgcolor="#FFFFFF">
-                            <p style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';">Address, #PC <br />
-                                City, State. <br />
-                                <a style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';"
-                                    href="#">Unsubscribe</a>
-                            </p>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="foo-logo" align="center" bgcolor="#FFFFFF">
-                            <img src="https://i.ibb.co/xX97KBh/LOGO.png" alt="logo">
-                        </td>
-                    </tr>
-                </table>
-
-            </td>
-
-        </tr>
-    </table>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#FFFFFF" class="line">
+                                <hr>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#FFFFFF" class="footer-text">
+                                <p style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';">
+                                    Corporation <br/>
+                                    You are receiving this email because you opted in via our <br/>website.
+        
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#FFFFFF">
+                                <table bgcolor="#FFFFFF" cellspacing="0" cellpadding="0" width="250" align="center">
+                                    <tr>
+                                        <td align="center">
+                                            <img src="https://i.ibb.co/hMj7kyr/twitter.png" alt="twitter">
+                                        </td>
+                                        <td align="center">
+                                            <img src="https://i.ibb.co/hyS7FTY/instagram.png" alt="instagram">
+                                        </td>
+                                        <td align="center">
+                                            <img src="https://i.ibb.co/BLvGP6d/youtube.png" alt="youtube">
+                                        </td>
+                                        <td align="center">
+                                            <img src="https://i.ibb.co/XpHsNQP/ball.png" alt="earth">
+                                        </td>
+                                        <td align="center">
+                                            <img src="https://i.ibb.co/KFjhmLm/linkedin.png" alt="linkedin">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="foo-adress" align="center" bgcolor="#FFFFFF">
+                                <p style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';">
+                                    Address, #PC <br/>
+                                    City, State. <br/>
+                                    <a style="font-family: Arial, Helvetica, sans-serif, 'Noto Sans';" href="#">Unsubscribe</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="foo-logo" align="center" bgcolor="#FFFFFF">
+                                <img src="https://i.ibb.co/xX97KBh/LOGO.png" alt="logo">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
     </body>
-
 </html>
